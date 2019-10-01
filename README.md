@@ -1,10 +1,13 @@
 # don't use it...yet.
 
+### my own version of go qql server
+
+based on the wonderful work of https://github.com/cmelgarejo/go-gql-server
 
 ### TODO://
 
-- remove ugly startup message
+- prettify startup message
 - config files yaml ? json ?...
-- logstach hook for logrus
+- logstash hook for logrus
 - docker 
 - circleci / github actions ? 

@@ -2,9 +2,11 @@ package resolvers
 
 import (
 	"context"
+
+	log "github.com/AndreiD/go-gql-server/internal/logger"
+
 	"github.com/AndreiD/go-gql-server/internal/gql/models"
 	tf "github.com/AndreiD/go-gql-server/internal/gql/resolvers/transformations"
-	log "github.com/AndreiD/go-gql-server/internal/logger"
 	dbm "github.com/AndreiD/go-gql-server/internal/orm/models"
 )
 
@@ -44,7 +46,7 @@ func userCreateUpdate(r *mutationResolver, input models.UserInput, update bool, 
 	}
 	gql, err := tf.DBUserToGQLUser(dbo)
 	if err != nil {
-		db.Rollback()
+		db.RollbackUnlessCommitted()
 		return nil, err
 	}
 	db = db.Commit()

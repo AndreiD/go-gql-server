@@ -29,8 +29,8 @@ input UserInput {
 
 # List Types
 type Users {
-    count: Int # You want to return count for a grid for example
-    list: [User!]! # that is why we need to specify the users object this way
+    count: Int
+    list: [User!]!
 }
 
 # Define mutations here
