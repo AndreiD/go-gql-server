@@ -7,7 +7,7 @@ based on the wonderful work of https://github.com/cmelgarejo/go-gql-server
 ### TODO://
 
 - prettify startup message
-- config files yaml ? json ?...
+- config files : viper -
 - logstash hook for logrus
 - docker 
 - circleci / github actions ? 
